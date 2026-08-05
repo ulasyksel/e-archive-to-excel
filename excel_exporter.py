@@ -6,11 +6,10 @@ import pandas as pd
 from openpyxl import load_workbook
 
 
-TEMPLATE_PATH = (
-    Path(__file__).resolve().parent
-    / "templates"
-    / "excel_sablonu.xlsx"
-)
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+TEMPLATE_PATH = BASE_DIR / "excel_sablonu.xlsx"
 
 
 def _python_value(value):
